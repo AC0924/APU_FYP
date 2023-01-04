@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 import numpy as np
 import streamlit as st 
-
+import htbuilder
 # For aesthetic design
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
