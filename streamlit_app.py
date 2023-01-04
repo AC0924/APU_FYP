@@ -7,7 +7,21 @@ import htbuilder
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
- 
+
+st.session_state['answer'] = ''!
+
+st.write(st.session_state)
+
+realans = ['', 'abc', 'edf']
+
+if  st.session_state['answer'] in realans:
+    answerStat = "correct"
+elif st.session_state['answer'] not in realans:
+    answerStat = "incorrect"
+
+st.write(st.session_state)
+st.write(answerStat)
+
 # loading the trained model
 with open('final_model.pkl', 'rb') as train_model:
     classifier = pickle.load(train_model)
